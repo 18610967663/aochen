@@ -111,12 +111,24 @@
         }
         
         footer {
-            margin-top: 50px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
             text-align: center;
             padding: 20px 0;
             border-top: 1px solid #eaeaea;
             color: #666;
             font-size: 14px;
+            background-color: #f8f9fa;
+            z-index: 100;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 70px; /* 为固定的footer留出空间 */
         }
     </style>
 </head>
@@ -130,6 +142,10 @@
             <div class="author-info">由拉面怪人开发 | 实用工具集合</div>
         </header>
         
+        <div class="view-zsm-container" style="text-align: center; margin: 20px 0;">
+            <button class="zsm-button" onclick="window.open('images/zsm.png')" style="padding: 10px 20px; background-color: #f4a742; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease;">点击此处赞赏作者</button>
+        </div>
+        
         <div class="tools-container">
             
             <div class="tool-card">
@@ -141,62 +157,57 @@
             <div class="tool-card">
                 <div class="tool-name">DeepSeek</div>
                 <div class="tool-description">可以帮你写代码、读文件、写作各种创意内容，请把你的任务交给它吧~</div>
-                <a href="" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://chat.deepseek.com/" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
                 <div class="tool-name">在线文档转换</div>
                 <div class="tool-description">支持多种格式文档在线转换，包括PDF、Word、Excel等</div>
-                <a href="https://www.aconvert.com/" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://www.freeconvert.com/zh/document-converter" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
-                <div class="tool-name">图片编辑器</div>
+                <div class="tool-name">抠图神器</div>
                 <div class="tool-description">在线编辑图片，调整大小，添加滤镜和特效</div>
-                <a href="https://www.photopea.com/" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://www.remove.bg/zh" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
-                <div class="tool-name">代码格式化</div>
-                <div class="tool-description">支持多种编程语言的代码格式化和美化</div>
-                <a href="https://prettier.io/playground/" class="tool-button" target="_blank">打开工具</a>
+                <div class="tool-name">在线换算器</div>
+                <div class="tool-description">支持多种数据换算</div>
+                <a href="https://cn.unitconverter.cc/" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
                 <div class="tool-name">在线翻译</div>
                 <div class="tool-description">支持多国语言在线翻译，准确高效</div>
-                <a href="https://translate.google.com/" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://cn.bing.com/translator?ref=TThis&text=&from=en&to=zh-Hans" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
                 <div class="tool-name">在线音频编辑</div>
                 <div class="tool-description">剪辑、合并、转换各种音频文件</div>
-                <a href="https://audiomass.co/" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://www.aigei.com/tool/audio" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
                 <div class="tool-name">在线视频编辑</div>
                 <div class="tool-description">简单易用的在线视频编辑工具</div>
-                <a href="https://www.kapwing.com/" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://online-video-cutter.com/cn/video-editor" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
                 <div class="tool-name">文件压缩</div>
                 <div class="tool-description">在线压缩图片、PDF等文件，减小文件体积</div>
-                <a href="https://www.ilovepdf.com/compress_pdf" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://www.youcompress.com/zh-cn/" class="tool-button" target="_blank">打开工具</a>
             </div>
             
             <div class="tool-card">
                 <div class="tool-name">在线思维导图</div>
                 <div class="tool-description">创建和分享思维导图，整理思路和计划</div>
-                <a href="https://www.mindmeister.com/" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://www.jyshare.com/more/kitymind/index.html" class="tool-button" target="_blank">打开工具</a>
             </div>
             
-            <div class="tool-card">
-                <div class="tool-name">在线表格处理</div>
-                <div class="tool-description">创建、编辑和分享在线表格</div>
-                <a href="https://www.google.com/sheets/about/" class="tool-button" target="_blank">打开工具</a>
-            </div>
             
             <div class="tool-card">
                 <div class="tool-name">在线笔记</div>
@@ -204,16 +215,11 @@
                 <a href="https://www.notion.so/" class="tool-button" target="_blank">打开工具</a>
             </div>
             
-            <div class="tool-card">
-                <div class="tool-name">在线绘图工具</div>
-                <div class="tool-description">创建流程图、图表和各种图形</div>
-                <a href="https://www.draw.io/" class="tool-button" target="_blank">打开工具</a>
-            </div>
             
             <div class="tool-card">
                 <div class="tool-name">在线PDF工具</div>
                 <div class="tool-description">PDF转换、编辑、合并和拆分</div>
-                <a href="https://smallpdf.com/" class="tool-button" target="_blank">打开工具</a>
+                <a href="https://tools.pdf24.org/zh/" class="tool-button" target="_blank">打开工具</a>
             </div>
         </div>
         
