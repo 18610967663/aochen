@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敖辰工具箱</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 30px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-right: 15px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .author-info {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .tool-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            height: 60px;
+            overflow: hidden;
+        }
+        
+        .tool-button {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .tool-button:hover {
+            background-color: #3367d6;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #eaeaea;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo"><img src="images/qrcode-icon.png" alt="敖辰工具箱" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                <div class="title">敖辰工具箱</div>
+            </div>
+            <div class="author-info">由拉面怪人开发 | 实用工具集合</div>
+        </header>
+        
+        <div class="tools-container">
+            
+            <div class="tool-card">
+                <div class="tool-name">敬请期待</div>
+                <div class="tool-description">青春没有售价，sincopa就在当下</div>
+                <a href="" class="tool-button" target="_blank">打开工具</a>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-name">DeepSeek</div>
+                <div class="tool-description">可以帮你写代码、读文件、写作各种创意内容，请把你的任务交给它吧~</div>
+                <a href="" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线文档转换</div>
+                <div class="tool-description">支持多种格式文档在线转换，包括PDF、Word、Excel等</div>
+                <a href="https://www.aconvert.com/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">图片编辑器</div>
+                <div class="tool-description">在线编辑图片，调整大小，添加滤镜和特效</div>
+                <a href="https://www.photopea.com/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">代码格式化</div>
+                <div class="tool-description">支持多种编程语言的代码格式化和美化</div>
+                <a href="https://prettier.io/playground/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线翻译</div>
+                <div class="tool-description">支持多国语言在线翻译，准确高效</div>
+                <a href="https://translate.google.com/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线音频编辑</div>
+                <div class="tool-description">剪辑、合并、转换各种音频文件</div>
+                <a href="https://audiomass.co/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线视频编辑</div>
+                <div class="tool-description">简单易用的在线视频编辑工具</div>
+                <a href="https://www.kapwing.com/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">文件压缩</div>
+                <div class="tool-description">在线压缩图片、PDF等文件，减小文件体积</div>
+                <a href="https://www.ilovepdf.com/compress_pdf" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线思维导图</div>
+                <div class="tool-description">创建和分享思维导图，整理思路和计划</div>
+                <a href="https://www.mindmeister.com/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线表格处理</div>
+                <div class="tool-description">创建、编辑和分享在线表格</div>
+                <a href="https://www.google.com/sheets/about/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线笔记</div>
+                <div class="tool-description">随时随地记录和整理笔记</div>
+                <a href="https://www.notion.so/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线绘图工具</div>
+                <div class="tool-description">创建流程图、图表和各种图形</div>
+                <a href="https://www.draw.io/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-name">在线PDF工具</div>
+                <div class="tool-description">PDF转换、编辑、合并和拆分</div>
+                <a href="https://smallpdf.com/" class="tool-button" target="_blank">打开工具</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 敖辰工具箱 - 善善善</p>
+        </footer>
+    </div>
+</body>
+</html>
